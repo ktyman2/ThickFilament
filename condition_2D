@@ -1,0 +1,72 @@
+Directory for saving data = data
+======================= Parameters for network condition =======================
+Load network data from Config(yes/no) = no
+If no, width of domain(x, y, z in um) = 10, 10, 0.1
+Periodic boundary condition(yes/no in x, y, z) = yes, yes, no
+If 2D network, specifiy the normal direction(no, x, y, or z) = z
+Actin concentration(in uM or given) = 100
+ACPC density(R value or given) = 0
+ACPB density(R value or given) = 0.1
+Motor density(R value or given) = 0
+Duration of network formation(s) = 1000
+Duration of simulation(s) = 100
+==================== Toggle the dynamic behaviors of actin =====================
+Allow the thermal fluctuation of actin filaments(yes/no) = yes
+Allow nucleation of actins(0: no, 1: stochastic, 2: constant # of filaments) = 1
+Allow assembly of actins(yes/no) = yes
+Allow disassembly of actins(yes/no) = no
+===================== Toggle the dynamic behaviors of ACP ======================
+Allow the thermal fluctuation of ACPs(yes/no) = yes
+Allow unbinding of inactive ACPs(yes/no) = yes
+Allow binding of monomeric ACPs(yes/no) = yes
+Allow unbinding of active ACPs(yes/no) = yes
+Allow binding of inactive ACPs(yes/no) = yes
+==================== Toggle the dynamic behaviors of motor =====================
+Allow the thermal fluctuation of motors(yes/no) = yes
+Allow walking of motors(0: no, 1: w/o slide-off, 2: w/ slide-off) = 2
+Allow unbinding of motors(yes/no) = yes
+Allow binding of motors(yes/no) = yes
+================ Parameters for the dynamic behaviors of actin =================
+k for actin nucleation(1/uM s) = 0.15
+k for actin assembly at barbed and pointed ends(1/uM s) = 60000, 0
+k for actin disassembly at barbed and pointed ends(1/s) = 0, 60000
+Factor for varying disassembly rate of actin with ACPs or motors = 1.0
+================= Parameters for the dynamic behaviors of ACP ==================
+k for ACP binding(k=i*k_0) = 100.0
+k0 and x for ACP unbinding(k0=i1*k0_0, x=i2*x_0) = 1.0, 1.0
+================ Parameters for the dynamic behaviors of motor =================
+k for motor binding(k=i*k_0) = 1.0
+k0 for motor unbinding and walking(k0=i*k0_0) = 1.0
+Transition rates between mechanochemical states in each head(k01, k10, k12, k21, k20 in 1/s) = 40, 2, 1000, 1000, 20
+Number of heads which each motor arm represents = 8
+Average number of motors per each self-assembled structure = 8
+Portion of inactive motor arms in self-assembled structures = 0
+k for motor assembly(in 1/s) = 1e1
+k for motor turnover(in 1/s) = 1e-3
+======== Adjustment for rates of the dynamic behaviors of actin and ABP ========
+During network formation(i*k) = 1000
+=============== Parameters for the mechanical behaviors of actin ===============
+Strength of repulsive forces between actin filaments(Kr=i*Kr_0) = 1.0
+Bending stiffness of actin filaments(Kb=i*Kb_0) = 1.0
+Extensional stiffness of actin filaments(Ks=i*Ks_0) = 1.0
+================ Parameters for the mechanical behaviors of ABP ================
+Bending stiffness which maintains an assigned angle between two arms of ACPC, ACPB, and motor(Kb=i*Kb_0) = 1.0, 1.0, 1.0
+Bending stiffness which maintains 90 deg between the axis of a filament and the arm of ACPC, ACPB, and motor(Kb=i*Kb_0) = 0, 0, 0
+Extensional stiffness of ACPC, ACPB, and motor(Ks=i*Ks_0) = 1.0, 1.0, 1.0
+======================== Parameters for data recording =========================
+Period of recording Output and Progress(s) = 0.1
+----------------------------- Structural information ---------------------------
+Period of recording Config(in s, -1 for deactivation) = 1
+Period of recording structural information for visualization via VMD(in s, -1 for deactivation) = 1
+Number of VMD files(multiple/single) = single
+Show the boundaries of a network drawn by VMD(yes/no) = yes
+Record information for coloring a network drawn by VMD(yes/no) = yes
+Lower and upper limits of forces for coloring(in pN) = 0, 100
+Period of recording length of actin filaments(in s, -1 for deactivation) = 1
+Period of recording distances between active ABPs(in s, -1 for deactivation) = 1
+--------------------------- Force, stress, and energy --------------------------
+Period of recording longitudinal forces of ABPs(in s, -1 for deactivation) = 1
+Period of recording mechanical energy(in s, -1 for deactivation) = 0.1
+Period of recording internal elastic/viscous stresses(in s, -1 for deactivation) and the number of measurements(in x, y, z) = 1, 20, 20, 1
+---------------------------------- Miscellany ----------------------------------
+Period of recording information in unit of individual elements, filament segments, and filaments(in s, -1 for deactivation) = 1
